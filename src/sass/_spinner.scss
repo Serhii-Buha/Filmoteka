@@ -1,0 +1,41 @@
+.loader {
+    position: absolute;
+    right: 0;
+    display: flex;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 34px;
+    height: 34px;
+    border: 5px solid #FFFFFF;
+    border-top-color: #000000;
+    border-radius: 50%;
+    animation: loading 750ms ease infinite;
+
+    @media screen and (min-width: 768px) {
+        width: 38px;
+        height: 38px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}

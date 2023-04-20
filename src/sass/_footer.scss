@@ -1,0 +1,150 @@
+
+.footer-container{
+    padding-top: 28px;
+    padding-bottom: 28px;
+    text-align: center;
+    
+    @media screen and (min-width: 768px) {
+        padding-top: 30px;
+    }
+}
+
+.footer{
+    background-color: #F7F7F7;
+    width: 100%;
+}
+.footer-text{
+    display: inline-block;
+   
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.16;
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+.footer-modal-text{
+    color: #545454;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.16;
+    display: block;
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+.footer-modal-title{
+    color: $main-text-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.16;
+}
+.footer-link{
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.16;
+    text-decoration: revert;
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+.list-students{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+.list-students img{
+    display: inline;
+    max-height: 170px;
+    min-width: 50px;
+}
+.list-students li{
+    width: 140px;
+}
+
+// модалка
+body.show-modal .backdrop-footer{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    overflow: scroll;
+}
+
+body.show-modal .modal-footer{
+transform: scale(1);
+}
+
+.backdrop-footer{
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.2);
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+z-index: 999; 
+}
+.modal-footer {
+position: absolute;
+padding: 28px;
+top: 20px;
+left: calc(50% - 140px);
+background-color: #F7F7F7;
+max-width: 280px;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+
+border-radius: 10px;
+@media screen and (min-width: 768px) {
+    max-width: 480px;
+    left: calc(50% - 234px);
+}
+@media screen and (min-width: 1280px) {
+    max-width: 650px;
+    left: calc(50% - 334px);
+}
+
+}
+.close-modal-footer{
+position: absolute;
+display: flex;
+justify-content: center;
+cursor: pointer;
+top: 8px;
+right: 8px;
+
+}
+
+
+// оформлення іконок
+.icon-Vector-footer{
+
+    fill: $accent-color;
+    margin-top: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.icon-linkedin-footer{
+    fill: rgb(0, 119, 181);
+}
+.icon-close-footer{
+    fill: $main-text-color;
+    &:hover {
+        fill:  $accent-color;
+    }
+}

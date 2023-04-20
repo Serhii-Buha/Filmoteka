@@ -1,0 +1,48 @@
+<header class="header container">
+      <div class="header__wrapper">
+        <div class="header-buttons-container">
+          <div class="header-navigation">
+  
+            <!-- Main buttons -->
+            <div class="header-main-buttons">
+              <button id="home-btn"
+              class="header-main-button header-main-button--home current-btn"
+                >Home</button
+              >
+              <button id="library-btn" class="header-main-button header-main-button--library"
+                >My Library</button
+              >
+            </div>
+  
+            <!-- Search form -->
+            <form class="search-form" id="search-form">
+              <!-- spinner container -->
+              <div id = 'loader' class="loader"></div>
+              <!----------------------->
+              <input
+                type="text"
+                name="searchQuery"
+                autocomplete="off"
+                placeholder="Movie Search"
+                class="search-form__input"
+              />
+              <button type="submit" class="search-form__button">
+                <svg width="16" height="16">
+                  <use href="./images/icons.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+  
+            <!-- Library buttons -->
+          </div>
+          <div id="library-buttons" class="library-buttons visually-hidden">
+            <button class="library-button library-button__watched">Watched</button>
+            <button class="library-button library-button__queue">queue</button>
+          </div>
+
+        </div>
+        
+        <a id="header-logo" href="./index.html" >
+          <h1 class="header-logo__title">Filmoteka</h1>
+        </a>
+    </header>

@@ -1,0 +1,272 @@
+// Common styles for button
+.button {
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    line-height: 1.16;
+    font-weight: 500;
+    background-color: #fff;
+    color: $main-text-color;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        height: 38px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        height: 42px;
+    }
+}
+
+// Header containers styles
+.header__wrapper {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 14px 14px 20px 14px;
+    min-height: 460px;
+    max-width: 280px;
+    background-image: url(../images/mobile-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/mobile-bg@2x.jpg);
+        ;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+        min-height: 220px;
+        padding: 16px;
+        background-size: cover;
+        background-image: url(../images/tablet-bg.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/tablet-bg@2x.jpg);
+            ;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        min-height: 316px;
+        max-width: 1280px;
+        padding: 16px 32px 32px 32px;
+        background-image: url(../images/desktop-bg.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/desktop-bg@2x.jpg);
+            ;
+        }
+    }
+
+}
+
+.header-buttons-container {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+.header-navigation {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row-reverse;
+        justify-content: left;
+    }
+
+    @media screen and (min-width: 1280px) {
+        gap: 8px;
+    }
+}
+
+// Main buttons in header
+.header-main-buttons {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+
+    @media screen and (min-width: 1280px) {
+        gap: 8px;
+    }
+}
+
+.header-main-button {
+    @extend .button;
+}
+
+.current-btn {
+    background-color: $main-text-color;
+    color: #fff;
+}
+
+.header-main-button--home {
+    width: 87px;
+
+    @media screen and (min-width: 768px) {
+        width: 83px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 99px;
+    }
+}
+
+.header-main-button--library {
+    width: 113px;
+
+    @media screen and (min-width: 768px) {
+        width: 109px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 117px;
+    }
+}
+
+// Search form  
+.search-form {
+    position: relative;
+}
+
+.search-form__input {
+    width: 100%;
+    height: 34px;
+    padding: 10px 14px;
+    font-weight: 400;
+    line-height: 1.16;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        height: 38px;
+        width: 165px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        height: 42px;
+        width: 187px;
+    }
+}
+
+.search-form__input::placeholder {
+    color: $main-text-color;
+}
+
+.search-form__button {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+
+    @media screen and (min-width: 1280px) {
+        top: 14px;
+    }
+}
+
+// Title 
+.header-logo--library {
+
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        top: calc(100% - 94px);
+        transform: translateX(-50%) translateY(-50%);
+        left: 50%;
+    }
+}
+
+.header-logo__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+
+    @media screen and (min-width: 768px) {
+        justify-content: left;
+        font-size: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 64px;
+    }
+}
+
+.header-logo__title::before {
+    content: "";
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+    background-image: url(../images/film-icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 1280px) {
+        height: 40px;
+        width: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        height: 59px;
+        width: 59px;
+    }
+
+}
+
+// Library buttons
+.library-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+
+    @media screen and (max-width: 767px) {
+        // margin-top: 250px;
+        gap: 4px;
+    }
+
+}
+
+.library-button {
+    @extend .button;
+}
+
+.library-button__watched {
+    padding-left: 23px;
+    padding-right: 23px;
+    background-color: $accent-color;
+    color: #fff;
+}
+
+.library-button__queue {
+    padding-left: 24px;
+    padding-right: 24px;
+    color: $accent-color;
+}
